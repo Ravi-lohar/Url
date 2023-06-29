@@ -21,7 +21,7 @@ public class UrlHitController {
         return urlHitService.getCount();
     }
     @GetMapping("count/{username}")
-    public Integer getHitCount(@PathVariable String username){
+    public User getHitCount(@PathVariable String username){
         return urlHitService.getHitCount(username);
     }
 
