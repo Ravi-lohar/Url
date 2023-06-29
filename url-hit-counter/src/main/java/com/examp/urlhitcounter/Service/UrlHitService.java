@@ -20,7 +20,7 @@ public class UrlHitService {
     public Map<String , Integer> gethashmap(){
         return urlHitRepo.gethashmap();
     }
-    public Integer getHitCount(String name) {
+    public User getHitCount(String name) {
         Map<String , Integer> originalList = gethashmap();
         Integer temp = originalList.get(name);
         if(temp == null){
@@ -30,7 +30,8 @@ public class UrlHitService {
             originalList.put(name , temp = temp+1);
         }
         hitcount++ ;
-        return originalList.get(name);
+        return new User(name,originalList.get(name));
+
     }
 
 

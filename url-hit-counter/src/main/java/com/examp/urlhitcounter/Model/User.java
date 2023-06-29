@@ -2,7 +2,7 @@ package com.examp.urlhitcounter.Model;
 
 import org.springframework.stereotype.Component;
 
-@Component
+
 public class User {
 
     private String userName ;
